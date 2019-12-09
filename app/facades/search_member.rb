@@ -12,4 +12,8 @@ class SearchMember
       Member.new(member_info)
     end
   end
+
+  def count_of_members
+    members.count
+  end
 end

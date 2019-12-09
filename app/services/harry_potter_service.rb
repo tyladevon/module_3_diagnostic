@@ -7,9 +7,10 @@ class HarryPotterService
 
 private
   def conn
-    conn = Faraday.new(url: "https://www.potterapi.com") do |faraday|
-      f.adapter  Faraday.default_adapter
-      f.params[:key] = ENV[harry_potter_key]
+    result = Faraday.new(url: "https://www.potterapi.com") do |faraday|
+      faraday.adapter  Faraday.default_adapter
+      faraday.params[:key] = ENV['harry_potter_key']
+      binding.pry
     end
   end
 end
