@@ -6,7 +6,7 @@ describe "As a User" do
       it "I am re-routed to '/search' and see total members of 'The Order' for the Griffindor House" do
 
         visit '/'
-        select "Griffindor", from: :house
+        select "Gryffindor", from: :house
         click_on "Search For Members"
 
         expect(current_path).to eq('/search')
